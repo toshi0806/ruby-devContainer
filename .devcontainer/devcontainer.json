@@ -1,0 +1,11 @@
+{
+  "name": "Ruby",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "workspaceFolder": "/workspace", 
+  "workspaceMount": "source=${localWorkspaceFolder}/src,target=/workspace,type=bind,consistency=cached",
+  "extensions": [
+    "Shopify.ruby-lsp"
+  ]
+}
