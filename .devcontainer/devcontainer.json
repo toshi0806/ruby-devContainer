@@ -5,5 +5,14 @@
   },
   "workspaceFolder": "/workspace", 
   "workspaceMount": "source=${localWorkspaceFolder}/src,target=/workspace,type=bind,consistency=cached",
-  "appPort": ["80:80"]
+  "appPort": [
+    "80:80"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Shopify.ruby-lsp"
+      ]
+    }
+  }
 }
