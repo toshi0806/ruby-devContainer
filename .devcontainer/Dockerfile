@@ -1,6 +1,8 @@
 FROM ruby:3.4
 
-ENV DISPLAY=host.docker.internal:0.0
+ENV DISPLAY=host.docker.internal:0.0 \
+    LANG=C.UTF-8 \
+    TZ=Asia/Tokyo
 
 ARG USERNAME=vscode
 ARG USER_UID=1000
@@ -13,6 +15,7 @@ RUN apt-get update \
     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
     && echo "$USERNAME ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME \
-    && git config --system --add safe.directory '*'
+    && git config --system --add safe.directory '*' \
+    && gem install pry
 
 USER $USERNAME

@@ -6,6 +6,7 @@
   "workspaceFolder": "/workspace",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
   "remoteUser": "vscode",
+  "postAttachCommand": "echo 'Ruby学習環境の準備ができました。ruby hello.rb で動作確認してください。'",
   "appPort": [
     "80:80"
   ],
@@ -13,8 +14,10 @@
     "vscode": {
       "extensions": [
         "Shopify.ruby-lsp",
-        "rebornix.Ruby",
-        "vscjava.vscode-java-pack"
+        "vscjava.vscode-java-pack",
+        "EditorConfig.EditorConfig",
+        "kaiwood.endwise",
+        "streetsidesoftware.code-spell-checker"
       ]
     }
   }
