@@ -3,8 +3,9 @@
   "build": {
     "dockerfile": "./Dockerfile"
   },
-  "workspaceFolder": "/workspace", 
+  "workspaceFolder": "/workspace",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "remoteUser": "vscode",
   "appPort": [
     "80:80"
   ],
